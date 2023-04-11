@@ -43,9 +43,9 @@ function displayClassroom(classroom){
 
     for (let i = 0; i < classroom1.students.length; i++) {
         const element = classroom1.students[i];
-        mainClassroom.innerHTML += `<li class="list-element">${element.name} ${element.surname} <li> `
+        mainClassroom.innerHTML += `<li class="list-element">${element.name} ${element.surname} <li>`
 //far cancellare e funzionare al bottone le cose da cancellare coi metodi visti in aula<button> cancella </button>
-    
+//modificare data di nascita, inserisci utente
 }
 
 displayClassroom(classroom1);
