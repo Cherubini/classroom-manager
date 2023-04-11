@@ -20,7 +20,7 @@ body{
     justify-content: space-evenly;
 }
 
-li{
+.list-element{
     padding: 5px;
 }
 

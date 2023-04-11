@@ -16,27 +16,36 @@ const classroom1 = new ClassRoom([student1, student2, student3, student4]);
 
 function displayClassroom(classroom){
     
-    document.getElementById('student-list').innerHTML = '';
+    // document.getElementById('student-list').innerHTML = '';
     
+    // for (let i = 0; i < classroom1.students.length; i++) {
+    //     const element = classroom1.students[i];
+    //     const mainClassroom=document.getElementById('student-list');
+    //     const newLi = document.createElement('li');
+    //     const text = document.createTextNode(element.toString());
+    //     const tempDate=new Date();
+    //     if(element.isBirthday())
+    //         {
+    //         const bold = document.createElement('b');
+    //         mainClassroom.appendChild(bold);
+    //         bold.appendChild(newLi);
+    //         newLi.appendChild(text);
+    //         }
+    //      else
+    //         {
+    //         newLi.appendChild(text);
+            // mainClassroom.appendChild(newLi);
+    //         }
+    // }
+
+    document.getElementById('student-list').innerHTML = '';
+    const mainClassroom=document.getElementById('student-list');
+
     for (let i = 0; i < classroom1.students.length; i++) {
         const element = classroom1.students[i];
-        const mainClassroom=document.getElementById('student-list');
-        const newLi = document.createElement('li');
-        const text = document.createTextNode(element.toString());
-        const tempDate=new Date();
-        if(element.isBirthday())
-            {
-            const bold = document.createElement('b');
-            mainClassroom.appendChild(bold);
-            bold.appendChild(newLi);
-            newLi.appendChild(text);
-            }
-         else
-            {
-            newLi.appendChild(text);
-            mainClassroom.appendChild(newLi);
-            }
-    }
+        mainClassroom.innerHTML += `<li class="list-element">${element.name} ${element.surname} <li> `
+//far cancellare e funzionare al bottone le cose da cancellare coi metodi visti in aula<button> cancella </button>
+    
 }
 
 displayClassroom(classroom1);
