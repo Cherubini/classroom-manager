@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClassRoom Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="title">Classroom Manager</h1>
+    <button class="bottoni" onclick="colorMainTitle()"></button>
+    <div class="list-container">
+        <ul id="student-list">
+        </ul>
+    </div>
+    <div class="bottoni">
+        <button class="button-53" onclick="shuffleTheClassroom()">Rimescola la classe</button>
+    </div>
+    <h3>Inserimento Studente</h3>
+    <div class="main-div">
+        <div id="classroom-div">
+        </div>
+        <div>
+            <span>Nome  </span>
+            <input id="input-nome" type="text">
+        </div>
+        <div>
+            <span>Cognome</span>
+            <input id="input-cognome" type="text">
+        </div>
+        <div>
+            <span>Data di nascita</span>
+            <input id="input-dob" type="text" placeholder="dd/mm/yyyy">
+        </div>
+        <div class="bottoni">
+            <button class="button-53" id="addButton" onclick="addStudentToClassroom()">Inserisci studente</button>
+            <button class="button-53" id="removeButton" onclick="removeStudentToClassroom()">Rimuovi studente</button>
+        </div>
+    </div>
+</body>
+    <script src="./student.js"></script>
+    <script src="./classroom.js"></script>
+    <script src="./main.js"></script>
+</html>
