@@ -98,6 +98,3 @@ function sumArray(array) {
     console.log(result);}
     return result-Math.min(tempArray)-Math.max(tempArray);
   }
-
-let nume=[2,3,4,5];
-console.log(sumArray(nume));
