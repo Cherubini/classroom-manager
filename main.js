@@ -87,3 +87,17 @@ function removeStudentToClassroom(){
 
 }
 
+function sumArray(array) {
+    if(array===null || array.length===0 || array.length === 1 || array===undefined)
+      return 0;
+      console.log(array);
+    let tempArray=array;
+    let result=0;
+    for(let i=0;i<tempArray.length;i++)
+      {result+=tempArray[i];
+    console.log(result);}
+    return result-Math.min(tempArray)-Math.max(tempArray);
+  }
+
+let nume=[2,3,4,5];
+console.log(sumArray(nume));
