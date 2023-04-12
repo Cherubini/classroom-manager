@@ -37,7 +37,9 @@ function displayClassroom(classroom){
             // mainClassroom.appendChild(newLi);
     //         }
     // }
-
+    }
+//********************************************** */
+function displayClassroom2(classroom){
     document.getElementById('student-list').innerHTML = '';
 
     const mainClassroom=document.getElementById('student-list');
@@ -48,15 +50,34 @@ function displayClassroom(classroom){
             mainClassroom.innerHTML += `<li class="list-element">${element.name} ${element.surname} </li>`
           else
             mainClassroom.innerHTML += `<li class="list-element"><b>${element.name} ${element.surname}</b> </li>`
+        mainClassroom.innerHTML += `<button class='remove-btn' id='remove-btn${i}'> patate </button>`
+        }
+    for (let i = 0; i < classroom1.students.length; i++) {
+        document.getElementById('remove-btn'+i).addEventListener('click', (event)=> removeStudentToClassroom())
+        }
 
 }
+
+function displayClassroom3(classroom){
+    document.getElementById('student-list').innerHTML = '';
+
+    const mainClassroom=document.getElementById('student-list');
+    const studentList = document.getElementById('student-list');
+    studentList.innerHTML='';
+    for (let i = 0; i < classroom.students.length; i++) {
+        const element = classroom.students[i];
+        if(!element.isBirthday())
+            mainClassroom.innerHTML += `<li class="list-element">${element.name} ${element.surname} </li>`
+          else
+            mainClassroom.innerHTML += `<li class="list-element"><b>${element.name} ${element.surname}</b> </li>`
+    }
 }
 
-displayClassroom(classroom1);
+displayClassroom3(classroom1);
 
 function shuffleTheClassroom(){
     classroom1.shuffleStudents();
-    displayClassroom(classroom1);
+    displayClassroom3(classroom1);
 }
 
 function addStudentToClassroom(){
@@ -70,11 +91,12 @@ function addStudentToClassroom(){
     inputNome.value = '';
     inputCognome.value = '';
     inputDob.value= '';
-    displayClassroom(classroom1);
+    displayClassroom3(classroom1);
 }
 
 
 function removeStudentToClassroom(){
+    console.log('fiffi');
     const inputNome = document.getElementById('input-nome');
     const inputCognome = document.getElementById('input-cognome');
     if(inputNome.value !== '' && inputCognome.value !== ''){
@@ -83,7 +105,7 @@ function removeStudentToClassroom(){
     }
     inputNome.value = '';
     inputCognome.value = '';
-    displayClassroom(classroom1);
+    displayClassroom3(classroom1);
 
 }
 
